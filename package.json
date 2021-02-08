@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "sample_project",
+  "engines": {
+    "node": ">=8.10.0",
+    "yarn": "1.x"
+  },
+  "workspaces": [
+    "api",
+    "app"
+  ],
+  "scripts": {
+    "build:all": "yarn build:api && yarn build:app",
+
+    "build:api": "yarn workspace @sample_project/api build",
+    "build:app": "yarn workspace @sample_project/app build"
+  }
+}
